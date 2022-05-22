@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+    #navbar{
+    height: 50px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    }
+    #navbar_child1{
+        width: 200px;
+        /* border: 1px solid red; */
+        margin-left: 50px;
+        margin-top: -4px;
+        text-align: center;
+    }
+    #navbar_child1 a{
+        text-decoration: none;
+        color: black;
+    }
+    #navbar_child2{
+        display: flex;
+        justify-content: space-around;
+        /* border: 1px solid red; */
+        margin-top: -4px;
+        width: 800px;
+    }
+    #navbar_child2 a{
+        text-decoration: none;
+        color: black;
+    }
+    #box{
+    background-color: crimson;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 20px; 
+    width: 70%;
+    padding-left: 150px;
+    margin: auto;
+    }
+    h1{
+    text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="navbar_child1">
+            <a href="index.html"><h3>MASAI SCHOOL</h3></a>
+        </div>
+        <div id="navbar_child2">
+            <a href="dashboard.html"><h3>DASHBOARD</h3></a>
+            <h3>WEB 17- <span>0</span></h3>
+            <h3>WEB 16- <span>0</span></h3>
+            <h3>WEB 15- <span>0</span></h3>
+        </div>
+    </div>
+    <div>
+        <h1>Student Details</h1>
+    </div>
+    <div id="box"></div>
+</body>
+</html>
+<script src="dashboard.js"></script>

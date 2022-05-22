@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <style>
+    #navbar{
+    height: 50px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    }
+    #navbar_child1{
+        width: 200px;
+        /* border: 1px solid red; */
+        margin-left: 50px;
+        margin-top: -4px;
+        text-align: center;
+    }
+    #navbar_child1 a{
+        text-decoration: none;
+        color: black;
+    }
+    #navbar_child2{
+        display: flex;
+        justify-content: space-around;
+        /* border: 1px solid red; */
+        margin-top: -4px;
+        width: 800px;
+    }
+    #navbar_child2 a{
+        text-decoration: none;
+        color: black;
+    }
+    #container{
+    width: 55%;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* border: 1px solid red; */
+   }
+    #container>h1{
+        text-align: center;
+        font-size: 30px;
+        color: chartreuse;
+        background-color: blue;
+        padding: 20px;
+    }
+    #name{
+        width: 80%;
+        padding: 10px;
+        margin-left: 70px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 1px solid white;
+    }
+    #course{
+        width: 80%;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 70px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 1px solid white;
+    }
+    #unit{
+        width: 80%;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 70px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 1px solid white;
+    }
+    #image{
+        width: 80%;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 70px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 1px solid white;
+    }
+    #batch{
+        width: 82.8%;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 70px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 1px solid white;
+    }
+    #add{
+        width: 82.8%;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 70px;
+        margin-bottom: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="navbar_child1">
+            <a href="index.html"><h3>MASAI SCHOOL</h3></a>
+        </div>
+        <div id="navbar_child2">
+            <a href="dashboard.html"><h3>DASHBOARD</h3></a>
+            <h3>WEB 17- <span>0</span></h3>
+            <h3>WEB 16- <span>0</span></h3>
+            <h3>WEB 15- <span>0</span></h3>
+        </div>
+    </div>
+    <div id="container">
+        <h1>STUDENT MANAGEMENT SYSTEM</h1>
+        <form onsubmit="submitDetails(event)" id="student">
+            <input type="text" id="name" placeholder="Enter name" required/>
+            <input type="text" id="course" placeholder="Enter your course" required/>
+            <input type="number" id="unit" placeholder="Enter unit" required/>
+            <input type="url" id="image" placeholder="Enter image url" required/>
+            <select id="batch">
+                <option value="web17" id="web17">web17</option>
+                <option value="web16" id="web16">web16</option>
+                <option value="web15" id="web15">web15</option>
+            </select>
+            <input type="submit" id="add"/>
+        </form>
+    </div>
+</body>
+</html>
+<script src="index.js"></script>
+
+
+<!-- data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACCCAMAAAC93eDPAAAAY1BMVEX8/PxZWlr///9RUlKVlZVOT09KS0tAQUFWV1c8PT1GR0f39/fk5OTHx8ednp64uLjr6+uvr694eXkwMjKDhITOzs6+vr7x8fGpqamLi4toaWlfYGDe3t7T1NR+fn42NzdxcXG8RjyGAAADMUlEQVR4nO2Z2ZaqMBBF4YQEgoyC4gDa//+VNzTd1wmFhJT2Q/abLtdiW6lUKoXnORwOh8PhcDgcDscbwX8+9vwkLbMgyMo0+YAG0OTrcxUKzhgXYVWt8+KtEur/B5Fg/hVMsCB5nwSaLBb+AyLOmjc5oIv5o0APj7t3OACZHBfoCTP6xYBXj6zB1WrUHrUD9i8NlMOeWAFB+NrA9+OA1AH5izz4ReaEDmifbIVbeEvngAObFlBl6kCmgHQyEQbCLZnDIZqnEB2JBLCZGQQVhg1NGHCalQk97ESigGK2gdoUBYUD0om6eI1ISRSyWUXhJwoZicJaYyHYmkJhdZy5JXui48q+gcpGDQWfEeQjEo1UUMmQECjMO6L+KxAcVX8hCjqViSYXNHeET7AjdI4IqrqgVx1JGki9M4KkadHKR5JsVA71p/uFv9A1ed7cbUnWO2p00CQNy+Dw8XvEX7hNqTvleVLgSHqn7EvkZDqEtDfrOfOFmn7Wc3o9ZTmRT1n6tXgxY5AkzfujQyeeBIKLN0zcvue8aLIxCSGy/nCiHQUD7Wl4ShLw++krH6avKE4tnQRWdczF5vtBaLa1rGTMFXFYyXrbDN9v1Od6RXRQYhv2f1zWxfCwx0k8UNR9rjK5pQgEVr8VgfO8GZ5w+z6in87znwou9vbH0Sj8SwaGbJfcZV0fk110KZ0ist03qXblplfg8lB211HoyoO82SWRtNu2II/vt2AkRLQOdmWel7vgq/90/4vY5nE1YvBtwfgP45duiw5IZ4x9x5C2uidsppuEJ5zt5ANardnGLczGoQHvqHWlviU6WiiU2GvNFe7hyzsYpMaJMHBempKqKC5mYZmcbBWnWfiyCt1oTdJj2ctLrYnrM9jXAgV0s+/Sr1hyz8bavChdEZkPntBaCYIKg/ElE8GiqnTBePiFxo6AIjJs47AxPKMfMT21UVtaB7UvDU8Ke+ugaIyC0C2uzReEUWlAaVNhZ6TwZaUuDURGRRqW6tKANFDAqrKpUBk0cGjtKhjUaOPLwzgmA9knNyhT4tJAYRczi8QGczBsA6uYvKaBZfQNHA6Hw+FwOBwOh+MJ/wC9iyom6efrjwAAAABJRU5ErkJggg== -->
